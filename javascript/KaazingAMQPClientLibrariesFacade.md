@@ -161,7 +161,7 @@ Deletes declared subscription queue and closes the channels:
 ### **close** function
 Disconnects the client from Kaazing WebSocket AMQP Gateway
 ```javascript
-amqpClient.disconnect();
+	amqpClient.disconnect();
 ```
 
 

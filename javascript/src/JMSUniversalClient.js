@@ -221,9 +221,11 @@ var jmsClientFunction=function(logInformation){
 			this.subscriptions[i].close();
 		}
 		$.when.apply($,this.subscriptions).then(function() {
-			session.close(function () {
-				connection.close(function () {
+			connection.stop(function(){
+				session.close(function () {
+					connection.close(function () {
 
+					});
 				});
 			});
 		});
